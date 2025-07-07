@@ -23,4 +23,4 @@ This is the Spots project — a interactive media application layout built with 
 
 This project is deployed and viewable at Github Pages
 
-- Deployment Link:
+- Deployment Link: https://dustinm012.github.io/se_project_spots/
