@@ -5,7 +5,7 @@
 }
 
 .profile__image {
-  border-radius: 8%;
+  border-radius: 8px;
   margin-right: 20px;
   height: 190px;
   width: 190px;
