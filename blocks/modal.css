@@ -1,0 +1,134 @@
+.modal {
+  visibility: hidden;
+  background-color: #21212166;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_is-opened {
+  visibility: visible;
+}
+
+.modal__content {
+  max-width: 630px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: white;
+  padding: 32px 50px;
+  position: relative;
+}
+
+.modal__close-button {
+  top: 32px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-image: url(../images/spots-images/closebutton.png);
+  background-color: transparent;
+  border: none;
+  opacity: 40%;
+}
+
+.modal__close-button:hover {
+  opacity: 1;
+}
+
+.modal__title {
+  margin: 0 0 32px;
+  font-family: "Poppins" Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__label {
+  margin: 0 0 32px;
+  font-family: "Poppins" Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 110.00000000000001%;
+  letter-spacing: 0%;
+  color: #212121b2;
+}
+
+.modal__input {
+  display: block;
+  margin: 8px 0 0;
+  width: 600px;
+  border-radius: 8px;
+  padding-top: 16px;
+  padding-right: 12px;
+  padding-bottom: 16px;
+  padding-left: 12px;
+  border-style: solid;
+  border-color: #21212166;
+}
+
+.modal__input::placeholder {
+  color: #2121214d;
+}
+
+.modal__input:hover {
+  border-color: #212121;
+}
+
+.modal__submit-button {
+  max-width: 156px;
+  height: 52px;
+  gap: 8px;
+  border-radius: 8px;
+  padding-top: 18px;
+  padding-right: 32px;
+  padding-bottom: 18px;
+  padding-left: 32px;
+  border-style: none;
+  background-color: #212121;
+}
+
+.modal__save-text {
+  font-family: "Poppins" Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #fcf5e5;
+}
+
+.modal__submit-button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 840px) {
+  .modal {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .modal__submit-button {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 288px) {
+  .modal {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
