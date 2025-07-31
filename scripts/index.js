@@ -33,28 +33,36 @@ editProfileCloseBtn.addEventListener("click", function () {
   editProfileModal.classList.remove("modal_is-opened");
 });
 
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+}
+
 newPostBtn.addEventListener("click", function () {
-  newPostModal.classList.add("modal_is-opened");
+  openModal(editProfileModal);
 });
 
 newPostCloseBtn.addEventListener("click", function () {
-  newPostModal.classList.remove("modal_is-opened");
+  closeModal(editProfileModal);
 });
 
 function handleEditProfile(evt) {
   evt.preventDefault();
   profileName.textContent = editProfileNameInput.value;
   profileDescription.textContent = editProfileDescriptionInput.value;
-  editProfileModal.classList.remove("modal_is-opened");
+  editProfileModal;
 }
 
-editProfileForm.addEventListener("sumbit, handleEditProfile");
+editProfileForm.addEventListener("submit, handleEditProfile");
 
-function handelNewPost(evt) {
+function handleNewPost(evt) {
   evt.preventDefault();
   console.log("Image:", newPostImageInput.value);
   console.log("Caption:", newPostCaptionInput.value);
-  newProfileModal.classList.remove("modal_is-opened");
+  newPostModal.classList.remove("modal_is-opened");
 }
 
 editProfileNewPost.addEventListener("sumbit, handleNewPost");
