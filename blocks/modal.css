@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   visibility: hidden;
-  width: 730px;
+  max-width: 730px;
   width: 100%;
   opacity: 0;
   transition: visibility 0.3s, opacity 0.3s linear;
@@ -43,6 +43,7 @@
   background-color: transparent;
   border: none;
   opacity: 40%;
+  cursor: pointer;
 }
 
 .modal__close-button:hover {

@@ -29,7 +29,7 @@ const initialCards = [
   },
 ];
 
-const editProfileBtn = document.querySelector(".profile__edit-button");
+const editProfileBtn = document.querySelector(".profile__edit-icon");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 
 const editProfileCloseBtn = editProfileModal.querySelector(
@@ -87,6 +87,7 @@ function getCardElement(data) {
   cardImageEl.addEventListener("click", () => {
     previewImageEl.src = data.link;
     previewImageEl.alt = data.name;
+    previewCaptionEl.textContent = data.name;
     openModal(previewModal);
   });
 
@@ -115,14 +116,6 @@ previewModalCloseBten.addEventListener("click", function () {
   closeModal(previewModal);
 });
 
-function openModal(modal) {
-  modal.classList.add("modal_is-opened");
-}
-
-function closeModal(modal) {
-  modal.classList.remove("modal_is-opened");
-}
-
 newPostBtn.addEventListener("click", function () {
   openModal(newPostModal);
 });
@@ -147,8 +140,8 @@ function handleNewPost(evt) {
     link: newPostImageInput.value,
   };
 
-  const cardElement = getCardElement(inputValue)({});
-  classList.append(cardElement);
+  const cardElement = getCardElement(inputValues)({});
+  classList.appendChild(cardElement);
   closeModal(newPostModal);
 }
 
