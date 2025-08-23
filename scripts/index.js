@@ -29,7 +29,7 @@ const initialCards = [
   },
 ];
 
-const editProfileBtn = document.querySelector(".profile__edit-icon");
+const editProfileBtn = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 
 const editProfileCloseBtn = editProfileModal.querySelector(

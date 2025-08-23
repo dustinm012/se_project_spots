@@ -9,7 +9,6 @@
   justify-content: center;
   align-items: center;
   visibility: hidden;
-  max-width: 730px;
   width: 100%;
   opacity: 0;
   transition: visibility 0.3s, opacity 0.3s linear;
@@ -125,6 +124,7 @@
   padding-left: 12px;
   border-style: solid;
   border-color: #21212166;
+  border-width: 1px;
 }
 
 .modal__input::placeholder {
@@ -173,10 +173,7 @@
     width: 100%;
   }
   .modal__content {
-    padding-right: 10px;
-    padding-left: 10px;
-    height: 336px;
-    width: 300px;
+    padding: 22px 12px 12px;
   }
 
   .modal__input {
