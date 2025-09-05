@@ -24,6 +24,7 @@
 }
 
 .modal__content {
+  box-sizing: border-box;
   max-width: 630px;
   width: 100%;
   border-radius: 8px;
@@ -38,7 +39,7 @@
   width: 40px;
   height: 40px;
   position: absolute;
-  background-image: url(../images/spots-images/closebutton.png);
+  background-image: url(../images/spots-images/closebutton.svg);
   background-color: transparent;
   border: none;
   opacity: 40%;
@@ -52,6 +53,7 @@
 .modal__close-button_type_preview {
   top: 0;
   right: -52.5px;
+  background-image: url(../images/spots-images/preveiwclosebutton.svg);
 }
 
 .modal__close-button_type_preview:hover {
@@ -76,11 +78,10 @@
   color: white;
   width: 214px;
   height: 32px;
-  font-family: Poppins;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
-  letter-spacing: 0%;
   background-color: #212121;
   border-radius: 8px;
   margin: 8px;
@@ -94,7 +95,6 @@
   font-style: Medium;
   font-size: 32px;
   line-height: 100%;
-  letter-spacing: 0%;
 }
 
 .modal__form {
@@ -106,7 +106,7 @@
   margin: 0 0 32px;
   font-family: "Poppins" Arial, Helvetica, sans-serif;
   font-weight: 500;
-  font-style: Medium;
+  font-style: normal;
   font-size: 16px;
   line-height: 110.00000000000001%;
   letter-spacing: 0%;
@@ -116,7 +116,7 @@
 .modal__input {
   display: block;
   margin: 8px 0 0;
-  width: 600px;
+  width: 100%;
   border-radius: 8px;
   padding-top: 16px;
   padding-right: 12px;
@@ -154,7 +154,7 @@
   font-style: Medium;
   font-size: 16px;
   line-height: 100%;
-  letter-spacing: 0%;
+
   color: #fcf5e5;
 }
 
@@ -177,7 +177,7 @@
   }
 
   .modal__input {
-    width: 276px;
+    font-size: 16px;
   }
 }
 

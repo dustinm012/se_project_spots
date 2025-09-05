@@ -140,8 +140,8 @@ function handleNewPost(evt) {
     link: newPostImageInput.value,
   };
 
-  const cardElement = getCardElement(inputValues)({});
-  classList.appendChild(cardElement);
+  const cardElement = getCardElement(inputValues);
+  cardList.appendChild(cardElement);
   closeModal(newPostModal);
 }
 
@@ -149,5 +149,5 @@ newPostForm.addEventListener("submit", handleNewPost);
 
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
-  cardsList.append(cardElement);
+  cardsList.prepend(cardElement);
 });
