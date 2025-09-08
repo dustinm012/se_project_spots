@@ -141,7 +141,7 @@ function handleNewPost(evt) {
   };
 
   const cardElement = getCardElement(inputValues);
-  cardList.appendChild(cardElement);
+  cardsList.appendChild(cardElement);
   closeModal(newPostModal);
 }
 

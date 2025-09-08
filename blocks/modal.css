@@ -76,8 +76,9 @@
 
 .modal__caption {
   color: white;
-  width: 214px;
-  height: 32px;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -85,14 +86,14 @@
   background-color: #212121;
   border-radius: 8px;
   margin: 8px;
-  padding-top: 8px;
+  padding: 4px 8px;
 }
 
 .modal__title {
   margin: 0 0 32px;
-  font-family: "Poppins" Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
-  font-style: Medium;
+
   font-size: 32px;
   line-height: 100%;
 }
@@ -104,12 +105,12 @@
 
 .modal__label {
   margin: 0 0 32px;
-  font-family: "Poppins" Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 16px;
   line-height: 110.00000000000001%;
-  letter-spacing: 0%;
+
   color: #212121b2;
 }
 
@@ -149,9 +150,9 @@
 }
 
 .modal__save-text {
-  font-family: "Poppins" Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
-  font-style: Medium;
+
   font-size: 16px;
   line-height: 100%;
 
