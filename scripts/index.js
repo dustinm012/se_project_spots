@@ -55,8 +55,8 @@ const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 
 const previewModal = document.querySelector("#preview-modal");
-const previewModalCloseBten = previewModal.querySelector(
-  ".previewModalCloseBtn"
+const previewModalCloseBtn = previewModal.querySelector(
+  ".modal__close-button_type_preview"
 );
 const previewImageEl = previewModal.querySelector(".modal__image");
 const previewCaptionEl = previewModal.querySelector(".modal__caption");
@@ -114,7 +114,7 @@ editProfileCloseBtn.addEventListener("click", function () {
   closeModal(editProfileModal);
 });
 
-previewModalCloseBten.addEventListener("click", function () {
+previewModalCloseBtn.addEventListener("click", function () {
   closeModal(previewModal);
 });
 
