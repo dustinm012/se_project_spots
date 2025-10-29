@@ -94,6 +94,12 @@ function getCardElement(data) {
   return cardElement;
 }
 
+function handleEscape(event) {
+  if (event.key === "Escape") {
+    closeModal(document.querySelector(".modal_is-opened"));
+  }
+}
+
 function openModal(modal) {
   document.addEventListener("keydown", handleEscape);
   modal.classList.add("modal_is-opened");
