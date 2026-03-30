@@ -2,15 +2,15 @@ const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__button",
-  inactiveButtonClass: "modal__button_disabled",
+  inactiveButtonClass: "modal__submit_disabled",
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error_visible"
 }
 
 const showInputError = (formEl, inputEl, errorMessage) => {
-  const errorMessageID = inputEl.id + ".error";
-  const errorMessageEL = formEl.querySelector("#" = errorMessageID);
-  errorMessageEL.textContent = errorMessageEL;
+  const errorMessageID = `${inputEl.id}-error`;
+  const errorMessageEL = formEl.querySelector(`#${errorMessageID}`);
+  errorMessageEL.textContent = errorMessage;
 inputEl.classList.add("modal__input_error");
 };
 
@@ -22,7 +22,7 @@ inputEl.classList.remove("modal__input_error");
 
 const checkInputValidity = (formEl, inputEl) => {
  if (!inputEl.validity.valid) {
-  showInputError(formEl, inputEl, inputEl.enableValidationMessage);
+  showInputError(formEl, inputEl, inputEl.validationMessage);
  } else {
   hideInputError(formEl, inputEl);
  }
@@ -37,18 +37,20 @@ const hasInvalidInput = (inputList) => {
 const toggleButtonState = (inputList, buttonEl) => {
 if (hasInvalidInput(inputList)) {
 disableButton(buttonEl);
-} else { buttonEl= false
+} else { buttonEl.disabled = false;
+  buttonEl.classList.remove(config.inactiveButtonClass);
 }
 };
 
 const disableButton = (buttonEl) => {
-  buttonEl.diabled = true;
+  buttonEl.disabled = true;
+buttonEl.classList.add(config.inactiveButtonClass);
 }
 
 
 
 const setEventListeners = (formEl, config) => {
-  const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
+  const formList = Array.from(document.querySelectorAll(config.formSelector));
   const buttonElement = formEl.querySelector(config.submitButtonSelector);
 
 
@@ -65,7 +67,7 @@ const setEventListeners = (formEl, config) => {
 
 
 const enableValidation = (config) => {
-  const formList = Array.form(document.querySelectorAll(config.formSelector))
+  const formList = Array.from(document.querySelectorAll(config.formSelector))
   formList.forEach(formEl => {
     setEventListeners(formEl, config);
   });

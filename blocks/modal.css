@@ -9,9 +9,10 @@
   justify-content: center;
   align-items: center;
   visibility: hidden;
-  width: 100%;
   opacity: 0;
-  transition: visibility 0.3s, opacity 0.3s linear;
+  transition:
+    visibility 0.3s,
+    opacity 0.3s linear;
 }
 
 .modal_type_preview {
@@ -25,7 +26,7 @@
 
 .modal__content {
   box-sizing: border-box;
-  max-width: 630px;
+  max-width: 730px;
   width: 100%;
   border-radius: 8px;
   background-color: white;
@@ -115,6 +116,7 @@
 }
 
 .modal__input {
+  box-sizing: border-box;
   display: block;
   margin: 8px 0 0;
   width: 100%;
@@ -146,6 +148,14 @@
   margin-top: 8px;
 }
 
+.modal__error_visible {
+  display: block;
+}
+
+.modal__input_type_error {
+  border-bottom: 1px solid #ff0000;
+}
+
 .modal__submit-button {
   max-width: 156px;
   height: 52px;
@@ -157,6 +167,12 @@
   padding-left: 32px;
   border-style: none;
   background-color: #212121;
+}
+
+.modal__submit-button_disabled {
+  background-color: grey;
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 .modal__save-text {
@@ -174,11 +190,6 @@
 }
 
 @media screen and (max-width: 840px) {
-  .modal {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-
   .modal__submit-button {
     max-width: none;
     width: 100%;
