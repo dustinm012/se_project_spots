@@ -82,7 +82,7 @@
                 required
               />
             </label>
-            <span id="card-link-link-error" class="modal__error"></span>
+            <span id="image-link-error" class="modal__error"></span>
             <label for="caption-text" class="modal__label">
               Caption
               <input
@@ -95,7 +95,7 @@
                 required
               />
             </label>
-            <span class="caption-text-error"></span>
+            <span class="caption-text-error" id="caption-text-error"></span>
             <button type="submit" class="modal__submit-button">
               <span class="modal__save-text">Save</span>
             </button>
@@ -118,7 +118,7 @@
                 maxlength="40"
                 required
               />
-              <span class="profile-input-error"></span>
+              <span class="profile-input-error" id="profile-input-error"></span>
             </label>
             <label for="profile-description-input" class="modal__label">
               Description
@@ -131,7 +131,10 @@
                 maxlength="200"
                 required
               />
-              <span class="profile-description-error"></span>
+              <span
+                class="profile-description-error"
+                id="profile-description-error"
+              ></span>
             </label>
             <button type="submit" class="modal__submit-button">
               <span class="modal__save-text">Save</span>

@@ -153,6 +153,8 @@ function handleNewPost(evt) {
 
   newPostForm.reset();
 
+  const submitButton = evt.submit;
+
   closeModal(newPostModal);
 }
 
