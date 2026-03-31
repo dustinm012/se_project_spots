@@ -143,6 +143,7 @@ editProfileForm.addEventListener("submit", handleEditProfile);
 
 function handleNewPost(evt) {
   evt.preventDefault();
+
   const inputValues = {
     name: newPostCaptionInput.value,
     link: newPostImageInput.value,
@@ -153,7 +154,8 @@ function handleNewPost(evt) {
 
   newPostForm.reset();
 
-  const submitButton = evt.submit;
+  const submitButton = newPostForm.querySelector(".modal__submit-button");
+  disableButton(submitButton, settings);
 
   closeModal(newPostModal);
 }
